@@ -73,7 +73,7 @@ const ItemCtrl = (function() {
     },
     deleteItem: function(id) {
       // Get id
-      ids = data.items.map(function(item) {
+      const ids = data.items.map(function(item) {
         return item.id;
       });
 
@@ -225,7 +225,7 @@ const UICtrl = (function() {
       ).textContent = totalCalories;
     },
     clearEditState: function() {
-      UICtrl.clearInput;
+      UICtrl.clearInput();
       document.querySelector(UISelectors.updateBtn).style.display = "none";
       document.querySelector(UISelectors.deleteBtn).style.display = "none";
       document.querySelector(UISelectors.backBtn).style.display = "none";
@@ -357,7 +357,7 @@ const App = (function(ItemCtrl, UICtrl) {
 
     UICtrl.clearEditState();
 
-    e.preventDefault;
+    e.preventDefault();
   };
 
   // Delete button event
@@ -391,11 +391,11 @@ const App = (function(ItemCtrl, UICtrl) {
     // Add total calories to UI
     UICtrl.showTotalCalories(totalCalories);
 
-    // Hide the UL
-    UICtrl.hideList();
-
     // Remove from UI
     UICtrl.removeItems();
+
+    // Hide the UL
+    UICtrl.hideList();
   };
 
   // Public methods
