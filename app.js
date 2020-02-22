@@ -301,7 +301,7 @@ const UICtrl = (function() {
   };
 })();
 
-This is a bug
+// This is a commented bug
 
 // App Controller
 const App = (function(ItemCtrl, StorageCtrl, UICtrl) {
