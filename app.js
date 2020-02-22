@@ -301,6 +301,8 @@ const UICtrl = (function() {
   };
 })();
 
+This is a bug
+
 // App Controller
 const App = (function(ItemCtrl, StorageCtrl, UICtrl) {
   // Load event listeners
